@@ -1,1 +1,37 @@
 
+29/11/21 03:47:29 PM Monday - <module> - INFO : Script started
+29/11/21 03:47:43 PM Monday - ElementsInteractions - INFO : .splash.view.SplashActivity
+29/11/21 03:47:49 PM Monday - <module> - INFO : Script ended
+29/11/21 03:49:29 PM Monday - <module> - INFO : Script started
+29/11/21 03:49:45 PM Monday - ElementsInteractions - INFO : Element found with locator value navigation_account using locatorType id
+29/11/21 03:49:45 PM Monday - ElementsInteractions - INFO : Clicked on element with locator value navigation_account using locatorType id
+29/11/21 03:49:48 PM Monday - ElementsInteractions - ERROR : Element not found with locator loginButton using locatorType id
+29/11/21 03:49:56 PM Monday - <module> - INFO : Script ended
+29/11/21 03:51:36 PM Monday - <module> - INFO : Script started
+29/11/21 03:51:50 PM Monday - ElementsInteractions - INFO : Element found with locator value navigation_account using locatorType id
+29/11/21 03:51:51 PM Monday - ElementsInteractions - INFO : Clicked on element with locator value navigation_account using locatorType id
+29/11/21 03:51:53 PM Monday - ElementsInteractions - ERROR : Element not found with locator loginButton using locatorType id
+29/11/21 03:51:53 PM Monday - ElementsInteractions - INFO : Element found with locator value logOutText using locatorType id
+29/11/21 03:51:53 PM Monday - ElementsInteractions - INFO : Clicked on element with locator value logOutText using locatorType id
+29/11/21 03:51:58 PM Monday - ElementsInteractions - INFO : Element found with locator value navigation_account using locatorType id
+29/11/21 03:51:58 PM Monday - ElementsInteractions - INFO : Clicked on element with locator value navigation_account using locatorType id
+29/11/21 03:51:59 PM Monday - ElementsInteractions - INFO : Element found with locator loginButton using locatorType id
+29/11/21 03:51:59 PM Monday - ElementsInteractions - INFO : Element found with locator value loginButton using locatorType id
+29/11/21 03:51:59 PM Monday - ElementsInteractions - INFO : Clicked on element with locator value loginButton using locatorType id
+29/11/21 03:51:59 PM Monday - ElementsInteractions - ERROR : Locator Type : edgar.navarrete@coppel.com entered is not found
+29/11/21 03:52:24 PM Monday - ElementsInteractions - ERROR : Element not found with locator value id using locatorType edgar.navarrete@coppel.com
+29/11/21 03:52:26 PM Monday - ElementsInteractions - ERROR : Unable to Sent the text emailEditText in element with locator value idusing locatorType edgar.navarrete@coppel.com
+29/11/21 03:52:32 PM Monday - <module> - INFO : Script ended
+29/11/21 03:54:06 PM Monday - <module> - INFO : Script started
+29/11/21 03:54:21 PM Monday - ElementsInteractions - INFO : Element found with locator value navigation_account using locatorType id
+29/11/21 03:54:21 PM Monday - ElementsInteractions - INFO : Clicked on element with locator value navigation_account using locatorType id
+29/11/21 03:54:23 PM Monday - ElementsInteractions - INFO : Element found with locator loginButton using locatorType id
+29/11/21 03:54:23 PM Monday - ElementsInteractions - INFO : Element found with locator value loginButton using locatorType id
+29/11/21 03:54:23 PM Monday - ElementsInteractions - INFO : Clicked on element with locator value loginButton using locatorType id
+29/11/21 03:54:24 PM Monday - ElementsInteractions - INFO : Element found with locator value emailEditText using locatorType id
+29/11/21 03:54:25 PM Monday - ElementsInteractions - INFO : Sent the text edgar.navarrete@coppel.com in element with locator value emailEditText using locatorType id
+29/11/21 03:54:26 PM Monday - ElementsInteractions - INFO : Element found with locator value passwordEditText using locatorType id
+29/11/21 03:54:26 PM Monday - ElementsInteractions - INFO : Sent the text 123456 in element with locator value passwordEditText using locatorType id
+29/11/21 03:54:27 PM Monday - ElementsInteractions - INFO : Element found with locator value loginButton using locatorType id
+29/11/21 03:54:27 PM Monday - ElementsInteractions - INFO : Clicked on element with locator value loginButton using locatorType id
+29/11/21 03:54:33 PM Monday - <module> - INFO : Script ended

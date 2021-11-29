@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as ec
 
 import utilities.Logger as Log
 import allure
+import time
 
 class ElementsInteractions:
 
@@ -32,22 +33,28 @@ class ElementsInteractions:
         return False
 
     def verify_activity(self, activity_name):
-        self.log.info(self.driver.current_activity)
-        if activity_name != self.driver.current_activity:
-            self.take_screenshot(self.driver.activity_name)
-            assert False
+        cont_max_time = 0
+        while cont_max_time > 10:
+            time.sleep(1)
+            cont_max_time += 1
+            if activity_name == self.driver.current_activity:
+                self.log.info("Activity name match with: " + activity_name)
+                break
+            elif activity_name != self.driver.current_activity and cont_max_time == 10:
+                self.take_screenshot(self.driver.activity_name)
+                self.log.info("Activity name expected: " + activity_name)
+                assert False
 
-    def explicit_wait(self, locator_value, locator_type, time):
+    def explicit_wait(self, locator_value, locator_type, max_time):
         try:
             locator_by_type = self.locator(locator_type)
-            WebDriverWait(self.driver, time).until(ec.presence_of_all_elements_located((locator_by_type, locator_value)))
+            WebDriverWait(self.driver, max_time).until(
+                ec.presence_of_all_elements_located((locator_by_type, locator_value)))
             self.log.info("Element found with locator " + locator_value + " using locatorType " + locator_by_type)
+            return True
         except Exception:
-            self.log.error(
-                "Element not found with locator " + locator_value + " using locatorType " + locator_type)
-            print_stack()
-            self.take_screenshot(locator_type)
-            assert False
+            self.log.error("Element not found with locator " + locator_value + " using locatorType " + locator_type)
+            return False
 
     def get_element(self, locator_value, locator_type):
         element = None
@@ -88,7 +95,7 @@ class ElementsInteractions:
             print_stack()
             assert False
 
-    def send_text(self, text, locator_value, locator_type):
+    def send_text(self, locator_value, locator_type, text):
         try:
             element = self.wait_element(locator_value, locator_type)
             element.send_keys(text)
