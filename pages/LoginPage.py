@@ -7,24 +7,21 @@ class LoginPage(ElementsInteractions):
         super().__init__(driver)
         self.driver = driver
 
-    id_email_input = "username"
-    id_password_input = "password"
-    id_login_button = "login"
+    id_user_input = "emailEditText"
+    id_password_input = "passwordEditText"
+    id_login_button = "loginButton"
+    id_error_message = "errorContainer"
+    activity_name_login = ".Login.view.LoginActivity"
 
-    def validate_login_activity(self):
-        self.verify_activity(".ui.login.LoginActivity")
+    def verify_login_activity(self):
+        self.verify_activity(self.activity_name_login)
 
-    def send_username(self, username):
-        self.send_text(username, self.id_email_input, "id")
-
-    def send_password(self, password):
-        self.send_text(password, self.id_password_input, "id")
+    def send_user_password(self, user, password):
+        self.send_text(self.id_user_input, "id", user)
+        self.send_text(self.id_password_input, "id", password)
 
     def press_login_button(self):
         self.press_element(self.id_login_button, "id")
 
-    def validate_attribute_enabled(self, status):
-        attribute = self.get_attribute(self.id_login_button, "id", "enabled")
-        if attribute != status:
-            assert False
-
+    def verify_error_message(self):
+        self.explicit_wait(self.id_error_message, "id", 10)
