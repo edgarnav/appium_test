@@ -1,13 +1,13 @@
 from traceback import print_stack
 
-from allure_commons.types import AttachmentType
+# from allure_commons.types import AttachmentType
 from selenium.common.exceptions import ElementNotVisibleException, NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
 import utilities.Logger as Log
-import allure
+# import allure
 import time
 
 class ElementsInteractions:
@@ -149,4 +149,5 @@ class ElementsInteractions:
         return element_displayed
 
     def take_screenshot(self, text):
-        allure.attach(self.driver.get_screenshot_as_png(), name=text, attachment_type=AttachmentType.PNG)
+        pass
+        # allure.attach(self.driver.get_screenshot_as_png(), name=text, attachment_type=AttachmentType.PNG)

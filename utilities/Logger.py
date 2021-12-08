@@ -1,6 +1,6 @@
 import inspect
 import logging
-import allure
+# import allure
 
 
 def func_logger():
@@ -17,5 +17,6 @@ def func_logger():
 
 
 def allure_log(text):
-    with allure.step(text):
-        pass
+    pass
+    # with allure.step(text):
+        # pass
